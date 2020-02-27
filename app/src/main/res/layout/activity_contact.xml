@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".activity.ContactActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_contato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_coantato"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/txt_title_contato"
+                    android:src="@drawable/about_white" />
+
+                <TextView
+                    android:id="@+id/txt_title_contato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Contatos"
+                    android:textColor="#ffffff"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contato"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/appbar_contato"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/card_contato_sociais"
+        app:layout_constraintEnd_toStartOf="@+id/card_contato_sociais"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_contato_telefone"
+        app:layout_constraintStart_toStartOf="@+id/card_contato_sociais"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_contato"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background_itens" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#81000000" />
+
+            <TextView
+                android:id="@+id/txt_logo_cantato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/akronim"
+                android:text="GC"
+                android:textColor="#fff"
+                android:textSize="100dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contato_sociais"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/card_contato_telefone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/card_contato_telefone"
+        app:layout_constraintStart_toStartOf="@+id/card_contato_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/card_contato"
+        app:layout_constraintVertical_bias="0.110000014">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relative_title_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_btn_title_one">
+
+
+                <TextView
+                    android:id="@+id/txt_social_contato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Nos siga nas redes sociais"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/img_facebook"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/relative_title_one"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15sp"
+                android:src="@drawable/facebook_color_48" />
+
+            <ImageView
+                android:id="@+id/img_instagran"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/img_facebook"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/instagram_color_48" />
+
+            <TextView
+                android:id="@+id/txt_facebook_contato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_facebook"
+                android:layout_alignBottom="@id/img_facebook"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_facebook"
+                android:gravity="center|start"
+                android:text=" @cozinhariadelivery"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_instagram_contato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_instagran"
+                android:layout_alignBottom="@id/img_instagran"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_instagran"
+                android:gravity="center|start"
+                android:text=" @cozinhariagc"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contato_telefone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_contato_sociais"
+        app:layout_constraintVertical_bias="0.39">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relative_title_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_btn_title_two">
+
+                <TextView
+                    android:id="@+id/txt_number_contato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Fale conosco"
+                    android:textAlignment="center"
+
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/img_whatsapp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/relative_title_two"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15sp"
+                android:src="@drawable/whatsapp_colors_48" />
+
+            <ImageView
+                android:id="@+id/img_telegran"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@id/img_whatsapp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/telegram_colors_48" />
+
+            <TextView
+                android:id="@+id/txt_whatsapp_contato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_whatsapp"
+                android:layout_alignBottom="@id/img_whatsapp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_whatsapp"
+                android:gravity="center|start"
+                android:text="62 999429-6266"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_telegran_contato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_telegran"
+                android:layout_alignBottom="@id/img_telegran"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/img_telegran"
+                android:gravity="center|start"
+                android:text="62 999429-6266"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android"-->

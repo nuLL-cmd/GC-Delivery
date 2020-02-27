@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:orientation="vertical"
+    tools:context=".activity.CarActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_title_car"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/txt_title_car"
+                    android:src="@drawable/ic_add_shopping_cart_black_24dp" />
+
+                <TextView
+                    android:id="@+id/txt_title_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Carrinho"
+                    android:textColor="#fff"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_payment_car"
+
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="5dp"
+            app:cardCornerRadius="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_endPayment_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_qtd_order"
+                    android:layout_marginStart="20dp"
+                    android:onClick="buyFinish"
+                    android:src="@drawable/ic_cash_32dp"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_clearOrders_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_qtd_order"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/btn_endPayment_car"
+                    android:onClick="clearOrders"
+                    android:src="@drawable/ic_delete_black_24dp"
+                    app:backgroundTint="#E53935" />
+
+
+                <TextView
+                    android:id="@+id/txt_totalPayment_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/btn_endPayment_car"
+                    android:layout_alignBottom="@id/btn_endPayment_car"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@id/btn_clearOrders_car"
+                    android:gravity="center|end"
+                    android:text=""
+                    android:textColor="#43A047"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/lbl_qtd_order"
+                    android:layout_alignEnd="@id/txt_totalPayment_car"
+                    android:layout_alignBottom="@id/lbl_qtd_order"
+                    android:gravity="center"
+                    android:text="Total do pedido" />
+
+                <TextView
+                    android:id="@+id/lbl_qtd_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/btn_endPayment_car"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="15sp"
+                    android:gravity="center"
+                    android:text="Total de itens: " />
+
+                <TextView
+                    android:id="@+id/txt_qtd_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15sp"
+                    android:layout_toEndOf="@id/lbl_qtd_order"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#1E88E5"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/progress1"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:background="#fff" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_car"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_above="@id/lbl_title_payment"
+            android:layout_alignParentTop="true"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_info_itens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/lbl_title_payment"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_above="@id/card_payment_car"
+            android:gravity="center"
+            android:text="Finalize seu pedido"
+            android:textStyle="bold" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:background="#fff"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

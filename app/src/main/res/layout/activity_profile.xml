@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC">
+
+
+    <RelativeLayout
+        android:id="@+id/appbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/txt_title_profile"
+                android:src="@drawable/ic_people_48dp" />
+
+            <TextView
+                android:id="@+id/txt_title_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Perfil do usuario"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_dados_profile"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:layout_above="@+id/card_adress_register"
+        android:layout_below="@+id/appbar_profile"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#ffffff"
+        android:padding="30dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_adress_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card_adress_register"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_profile">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_dados_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DADOS DO USUARIO"
+
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_name_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/txt_dados_user_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Nome"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+
+            <EditText
+                android:id="@+id/edt_phone_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_name_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_perm_phone_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Telefone(Celular)"
+                android:inputType="numberSigned"
+                android:maxLength="9"
+
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_email_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_phone_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_email_black_24dp"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_user_profile"
+                android:layout_width="200dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_email_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_person_add_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Usuario"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_password_profile"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_user_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_password_24dp"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:hint="Senha"
+                android:text="******"
+                android:inputType="numberPassword"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#fff" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_adress_register"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/btn_save_profile"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_dados_profile"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_adress_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ENDEREÇO DE ENTREGA"
+
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_street_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/txt_adress_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_local_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Rua"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_number_profile"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/edt_street_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_home_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Nº"
+                android:inputType="numberSigned"
+                android:maxLength="4"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_cep_profile"
+                android:layout_width="150dp"
+                android:layout_height="25sp"
+                android:layout_below="@id/edt_number_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_cep_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="CEP"
+                android:inputType="numberSigned"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_complemento_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_below="@id/edt_cep_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_sort_by_alpha_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Complemento"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_bairro_profile"
+                android:layout_width="match_parent"
+                android:layout_height="25sp"
+                android:layout_below="@id/edt_complemento_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_location_city_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Setor"
+                android:singleLine="true"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_city_profile"
+                android:layout_width="170dp"
+                android:layout_height="25sp"
+                android:layout_below="@id/edt_bairro_profile"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_add_location_black_24dp"
+                android:drawablePadding="10dp"
+                android:enabled="false"
+                android:hint="Cidade"
+                android:singleLine="true"
+                android:text="Trindade"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_state_profile"
+                android:layout_width="100dp"
+                android:layout_height="25sp"
+                android:layout_alignTop="@id/edt_city_profile"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_edt"
+                android:drawableStart="@drawable/ic_add_location_black_24dp"
+                android:enabled="false"
+                android:text="GO"
+                android:textAlignment="center"
+                android:textColor="#E8888787"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_save_profile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_btn_login"
+        android:fontFamily="@font/akronim"
+        android:singleLine="true"
+        android:text="Salvar"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:onClick="updateUser"
+        android:textStyle="bold"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

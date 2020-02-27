@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ECECEC"
+    android:layout_height="match_parent"
+    tools:context=".activity.CardapioActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar_cardapio">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toolbar_cardapio">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_toStartOf="@id/txt_title_contato"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_cardapio_sgv"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardapio"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:id="@+id/txt_title_contato"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ffffff"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbar_cardapio"
+        android:id="@+id/recycler_cardapio"
+        tools:listitem="@layout/layout_celula_cardapio"/>
+
+
+</RelativeLayout>

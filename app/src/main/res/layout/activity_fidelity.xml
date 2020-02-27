@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.FidelityActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_info_fidelity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+
+
+            <RelativeLayout
+                android:id="@+id/relative_title_card"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/background_btn_f2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="COMPLETE 10 PEDIDOS \nE O PROXIMO SERÁ POR NOSSA CONTA :D"
+                    android:textColor="#fff"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_name_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_title_card"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/press_start_2p"
+                android:text="MARCO AURELIO J FRANCISCO"
+                android:textAlignment="center"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_phone_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name_card"
+                android:layout_marginStart="25sp"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/press_start_2p"
+                android:text="62 99349-1611"
+                android:textAlignment="center"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_sit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txt_phone_card"
+                android:layout_marginStart="25sp"
+                android:layout_toEndOf="@id/txt_phone_card"
+                android:fontFamily="@font/press_start_2p"
+                android:text="ATIVO"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_gift_card"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/ic_card_giftcard_black_24dp"
+                app:backgroundTint="#fff"
+                app:borderWidth="3dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_itens_card"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/layout_celula_fidelity" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

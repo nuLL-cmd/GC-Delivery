@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ECECEC"
+
+    android:layout_height="match_parent"
+    tools:context="activity.ItensActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/background_btn_title"
+        android:id="@+id/relative_details_cut">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_shopping_cart_white_120dp" />
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data:"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/lbl_data_pedido"
+        android:layout_alignTop="@id/imageView2"
+        android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/lbl_data_pedido"
+            android:layout_alignTop="@id/lbl_data_pedido"
+            android:id="@+id/txt_data_pedido"
+            android:layout_marginStart="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Situação:"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/lbl_situacao_pedido"
+            android:layout_alignStart="@id/lbl_valor_pedido"
+            android:layout_below="@id/lbl_valor_pedido"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:id="@+id/txt_situacao_pedido"
+            android:layout_toEndOf="@id/lbl_situacao_pedido"
+            android:layout_alignTop="@id/lbl_situacao_pedido"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor:"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:id="@+id/lbl_valor_pedido"
+            android:layout_below="@id/lbl_data_pedido"
+            android:layout_alignStart="@id/lbl_data_pedido"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@id/lbl_valor_pedido"
+            android:layout_alignBottom="@id/lbl_valor_pedido"
+            android:id="@+id/txt_valor_pedido"
+            android:layout_toEndOf="@id/lbl_valor_pedido" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_pedido"
+        android:layout_alignStart="@id/relative_details_cut"
+        android:layout_alignEnd="@id/relative_details_cut"
+
+        android:layout_marginTop="10dp"
+        android:layout_above="@id/card_info_pedido"
+        android:layout_below="@id/relative_details_cut">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+      />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_info_pedido"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_title_sit_pedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="PEDIDO AGUARDANDO ENTREGA"
+                android:textAlignment="center"
+                 />
+
+            <TextView
+                android:id="@+id/lbl_data_sit_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title_sit_pedido"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Data:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_data_sit_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_data_sit_pedido"
+                android:layout_alignBottom="@id/lbl_data_sit_pedido"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="#115D9F"
+                 />
+
+
+            <TextView
+                android:id="@+id/lbl_sit_valor_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_data_sit_pedido"
+                android:layout_marginStart="10dp"
+                android:text="Valor:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_sit_valor_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_sit_valor_pedido"
+                android:layout_alignBottom="@id/lbl_sit_valor_pedido"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="#286C2B"
+                 />
+
+            <TextView
+                android:id="@+id/lbl_sit_status_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_sit_valor_pedido"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Situação:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_sit_status_pedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/lbl_sit_status_pedido"
+                android:layout_alignBottom="@id/lbl_sit_status_pedido"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:textColor="#E53935"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/relative_status_order"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#fff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="você nao tem nenhum \n pedido em andamento :("/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+         />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

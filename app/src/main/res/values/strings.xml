@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GC Delivery</string>
+    <string name="desc_login">Com nosso app, você tem a liberdade de pedir no conforto de sua casa, e o melhor <b>Entrega gratis!</b></string>
+    <string name="recovery_password">Esqueci minha senha!</string>
+</resources>

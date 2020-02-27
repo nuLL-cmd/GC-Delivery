@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/bottomsheetContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_bottomsheet"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/txt_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pagamento na entrega"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="15sp"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"/>
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/txt_payment"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:id="@+id/linear_info"
+        android:layout_below="@id/view_one"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            app:cardCornerRadius="6dp"
+            android:elevation="6dp"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:id="@+id/img_dishOrder_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cash8"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginStart="20sp">
+
+            <RadioButton
+                android:id="@+id/rd_card"
+                android:layout_width="match_parent"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:text="Maquininha de cartão"/>
+
+
+            <RadioButton
+                android:id="@+id/rd_cash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dinheiro"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@id/linear_info"
+        android:id="@+id/view_two"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@id/view_two"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_endOrder_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Finalizar pedido"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:background="@drawable/background_btn_login"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

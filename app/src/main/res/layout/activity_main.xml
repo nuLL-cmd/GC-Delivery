@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/btn_img_perfil_main"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/btn_logout_main"
+                    android:background="@drawable/background_btn_edit"
+                    android:onClick="setPicUser"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_linked_camera_black_24dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_logout_main"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/background_btn_edit"
+                    android:onClick="logoutMethod"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_exit_to_app_black_24dp" />
+
+                <ImageView
+                    android:id="@+id/img_title_main"
+                    android:layout_width="32dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_home_white_120dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GC Delivery"
+                    android:textColor="#fff"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/img_title_main"
+                    android:layout_alignBottom="@id/img_title_main"
+                    android:layout_alignTop="@id/img_title_main"
+                    android:gravity="center"/>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/txt_home_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_user_info"
+        android:layout_marginTop="10dp"
+        android:text="HOME"
+        android:textAlignment="center"
+        android:textSize="20sp"
+       />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_menu_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_home_main"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:id="@+id/relative_menu_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txt_cardapio_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/btn_cardapio_main"
+                android:layout_alignEnd="@id/btn_cardapio_main"
+                android:gravity="center"
+                android:text="Cardapio"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_cardapio_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/txt_cardapio_main"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityCardaptio"
+                android:scaleType="fitCenter"
+                android:src="@drawable/food_blue" />
+
+            <TextView
+                android:id="@+id/txt_fidelidade_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/btn_fidelidade_main"
+                android:layout_alignEnd="@id/btn_fidelidade_main"
+                android:gravity="center"
+                android:text="Fidelidade"
+               />
+
+            <ImageButton
+                android:id="@+id/btn_fidelidade_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/txt_fidelidade_main"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityFidelity"
+                android:scaleType="fitCenter"
+                android:src="@drawable/card_blue" />
+
+            <TextView
+                android:id="@+id/txt_pedidos_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txt_cardapio_main"
+                android:layout_alignBottom="@id/txt_cardapio_main"
+                android:layout_toStartOf="@id/txt_fidelidade_main"
+                android:layout_toEndOf="@id/txt_cardapio_main"
+                android:gravity="center"
+                android:text="Meus pedidos"
+               />
+
+            <ImageButton
+                android:id="@+id/btn_pedidos_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignStart="@id/txt_pedidos_main"
+                android:layout_alignTop="@id/btn_cardapio_main"
+                android:layout_alignEnd="@id/txt_pedidos_main"
+                android:layout_alignBottom="@id/btn_cardapio_main"
+                android:layout_toEndOf="@id/btn_cardapio_main"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityMyItens"
+                android:scaleType="fitCenter"
+                android:src="@drawable/list_item" />
+
+            <TextView
+                android:id="@+id/txt_settings_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/btn_settings_main"
+                android:layout_alignTop="@id/txt_carShopping_main"
+                android:layout_alignEnd="@id/btn_settings_main"
+                android:gravity="center"
+                android:text="Perfil"
+               />
+
+            <ImageButton
+                android:id="@+id/btn_settings_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/txt_settings_main"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityProfile"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tools" />
+
+            <TextView
+                android:id="@+id/txt_carShopping_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_cardapio_main"
+                android:layout_alignStart="@id/btn_carShopping_main"
+                android:layout_alignEnd="@id/btn_carShopping_main"
+                android:gravity="center"
+                android:text="Carrinho"
+               />
+
+            <ImageButton
+                android:id="@+id/btn_carShopping_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/txt_carShopping_main"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityCar"
+                android:scaleType="fitCenter"
+                android:src="@drawable/carshopping_96" />
+
+            <TextView
+                android:id="@+id/txt_contact_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/txt_carShopping_main"
+                android:layout_alignBottom="@id/txt_carShopping_main"
+                android:layout_toStartOf="@id/txt_settings_main"
+                android:layout_toEndOf="@id/txt_carShopping_main"
+                android:gravity="center"
+                android:text="Contato"
+               />
+
+            <ImageButton
+                android:id="@+id/btn_contact_main"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/txt_contact_main"
+                android:layout_alignStart="@id/txt_contact_main"
+                android:layout_alignTop="@id/btn_carShopping_main"
+                android:layout_alignEnd="@id/txt_contact_main"
+                android:layout_alignBottom="@id/btn_carShopping_main"
+                android:layout_toStartOf="@id/btn_settings_main"
+                android:layout_toEndOf="@id/btn_carShopping_main"
+                android:background="@drawable/background_btn_details"
+                android:onClick="nextActivityContact"
+                android:scaleType="fitCenter"
+                android:src="@drawable/contact_96" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_perfil_main"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/appbar_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:civ_border_color="#7E7D7D"
+        android:scaleType="centerCrop"
+        app:civ_border_width="3dp"
+        android:src="@drawable/person2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_perfil_main"
+        android:layout_alignStart="@id/card_menu_main"
+        android:layout_alignEnd="@id/card_menu_main"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_name_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/lbl_name_main"
+                android:ellipsize="marquee"
+                android:textAllCaps="true"
+                android:singleLine="true"
+                android:text="CARREGANDO"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_name_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="marquee"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:text="NOME:"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+              />
+
+            <TextView
+                android:id="@+id/txt_email_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name_main"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/lbl_email_main"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_email_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_name_main"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="EMAIL:"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                 />
+
+            <TextView
+                android:id="@+id/txt_phone_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_email_main"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/lbl_phone_main"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_phone_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_email_main"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="TELEFONE:"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                 />
+
+            <TextView
+                android:id="@+id/txt_user_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_phone_main"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:layout_toEndOf="@id/lbl_user_main"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_user_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_phone_main"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="USUARIO:"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                />
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
