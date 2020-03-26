@@ -1,25 +1,25 @@
 # GC-Delivery
 
-  Projeto para Cozinharia GC
+GC CozinhariaGC Delivery
 
-  O painel Cliente permite:
-  * Criação e consulta de cadastro
-  * Escolha de pratos do cardapio
-  * Listagem e etalhes dos pratos disponiveis
-  * Carrinho do usuario pedendo conter um ou mais intens
-  * Gerenciamento do carrinho (Fechar e limpar carrinho)
-  * Cartão fidelidade (Opcional)
-  * Foto de perfil personalizada
-  * MAIS..
+   The Client panel allows you to:
+   * Registration creation and consultation
+   * Choice of menu dishes
+   * List and details of available dishes
+   * User cart requesting to contain one or more intens
+   * Cart management (Close and clean cart)
+   * Loyalty card (Optional)
+   * Custom profile photo
+   * MORE..
 
-  O projeto foi desenvolvido em dois modulos Admin e Cliente, no qual tambem esta postado no github, utilizando como linguagem principal 
-  o Java e o ambiente de desenvolvimento Android Studio, foi construindo tendo como base praticas de programação aprendida na faculdade
-  afim de servir como aprendizado de novos metodos e boas praticas de programação.
+   The project was developed in two modules, Admin and Client, which is also posted on github, using the main language
+   Java and the Android Studio development environment, was built based on programming practices learned in college
+   in order to serve as learning new methods and good programming practices.
 
-  O backend foi craido em uma classe de operações separdas que contem alem das 4 operações CRUD, algumas features para facilitar as
-  tarefas do projeto.
+   The backend was created in a class of separd operations that contains in addition to the 4 CRUD operations, some features to facilitate
+   project tasks.
 
-  Linguagem utilizada: Java 
-  Banco de dados: Firebase NOSQL
-  Versão do SDK: 1.8.0
-  Versao do AS: 3.5.3
+   Language used: Java
+   Database: Firebase NOSQL
+   SDK Version: 1.8.0
+   AS version: 3.5.3
